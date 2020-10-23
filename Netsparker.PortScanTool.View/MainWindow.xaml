@@ -1,0 +1,30 @@
+﻿<Window x:Class="Netsparker.PortScanTool.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Netsparker.PortScanTool.View"
+        mc:Ignorable="d"
+        Title="IP Port Scan Tool" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="357*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="IP Range To Scan :" Grid.Column="1" HorizontalAlignment="Left" Margin="72,31,0,0" VerticalAlignment="Top"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="184,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" Text="{Binding IPAddressStart,Mode=TwoWay}"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="324,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="22" Text="{Binding IPAddressEnd,Mode=TwoWay}"/>
+        <Button x:Name="BtnSetSampleIPRange" Content="Set Sample IP Range" Grid.Column="1" HorizontalAlignment="Left" Margin="468,35,0,0" VerticalAlignment="Top" Click="BtnSetSampleIPRange_Click"/>
+        <Label Content="How Many Parallel Tasks to Run :" HorizontalAlignment="Left" Margin="82,69,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.158,-0.191" Grid.ColumnSpan="2"/>
+        <Slider Value="{Binding ParallelTaskCount,Mode=TwoWay}" Minimum="1" Maximum="10" Grid.Column="1" HorizontalAlignment="Left" Margin="184,77,0,0" VerticalAlignment="Top" Width="260"/>
+        <Label Grid.Column="1" HorizontalAlignment="Left" Margin="444,72,0,0" VerticalAlignment="Top" Content="{Binding ParallelTaskCount,Mode=OneWay}"/>
+        <Button x:Name="BtnStartScan" Content="Start Scan" Grid.Column="1" HorizontalAlignment="Left" Margin="244,125,0,0" VerticalAlignment="Top" Width="79" Height="32" Click="BtnStartScan_Click" IsEnabled="{Binding BtnStartScanEnabled}"/>
+        <Button x:Name="BtnEndScan" Content="End Scan" Background="Red" Grid.Column="1" HorizontalAlignment="Left" Margin="344,125,0,0" VerticalAlignment="Top" Width="80" Height="32" Visibility="{Binding IsBtnEndScanVisible,Mode=OneWay, Converter={StaticResource booleanVisibilityConverter}, ConverterParameter=IsBtnEndScanVisible}" IsEnabled="{Binding BtnEndScanEnabled}" Click="BtnEndScan_Click"/>
+        <Label x:Name="LblScanOperationInfo" Background="AliceBlue" Grid.Column="1" HorizontalAlignment="Left" Margin="184,162,0,0" VerticalAlignment="Top" Width="305"  Visibility="{Binding IsLblScanOperationInfoVisible,Mode=OneWay, Converter={StaticResource booleanVisibilityConverter}, ConverterParameter=IsLblScanOperationInfoVisible}" Content="{Binding LblScanOperationInfoText,Mode=OneWay}"/>
+        <Label Content="Detected Open Ports:" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        <Label Content="ports scanned." Grid.Column="1" HorizontalAlignment="Left" Margin="309,0,0,0" VerticalAlignment="Center" RenderTransformOrigin="-0.263,0.231" Width="102"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="254,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="50" IsEnabled="False" Text="{Binding ScannedPortCount,Mode=OneWay}"/>
+        <ListBox x:Name="ListBxDetectedOpenPorts" Grid.Column="1" Margin="10,246,77,30" ItemsSource="{Binding ListBxDetectedOpenPorts,Mode=TwoWay}" />
+
+    </Grid>
+</Window>

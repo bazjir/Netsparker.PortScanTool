@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netsparker.PortScanTool.Shared", "Netsparker.PortScanTool.Shared\Netsparker.PortScanTool.Shared.csproj", "{F0B971E0-6B96-4070-8952-3E5C9FE187B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netsparker.PortScanTool.View", "Netsparker.PortScanTool.View\Netsparker.PortScanTool.View.csproj", "{5D1631B4-0ABA-4499-839F-5670EB280272}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netsparker.PortScanTool.ViewModel", "Netsparker.PortScanTool.ViewModel\Netsparker.PortScanTool.ViewModel.csproj", "{32D1B23E-E129-4F1B-BE31-C102DA3D74BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0B971E0-6B96-4070-8952-3E5C9FE187B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0B971E0-6B96-4070-8952-3E5C9FE187B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0B971E0-6B96-4070-8952-3E5C9FE187B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0B971E0-6B96-4070-8952-3E5C9FE187B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1631B4-0ABA-4499-839F-5670EB280272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1631B4-0ABA-4499-839F-5670EB280272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1631B4-0ABA-4499-839F-5670EB280272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1631B4-0ABA-4499-839F-5670EB280272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D1B23E-E129-4F1B-BE31-C102DA3D74BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D1B23E-E129-4F1B-BE31-C102DA3D74BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D1B23E-E129-4F1B-BE31-C102DA3D74BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D1B23E-E129-4F1B-BE31-C102DA3D74BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25A53F33-4612-4F06-B947-F9A8581057CB}
+	EndGlobalSection
+EndGlobal

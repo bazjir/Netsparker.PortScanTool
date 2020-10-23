@@ -1,0 +1,10 @@
+﻿<Application x:Class="Netsparker.PortScanTool.View.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Netsparker.PortScanTool.View"
+             Startup="OnStartup">
+    <Application.Resources>
+        <!-- Value Converters -->
+        <local:BooleanVisibilityConverter x:Key="booleanVisibilityConverter"/>
+    </Application.Resources>
+</Application>
